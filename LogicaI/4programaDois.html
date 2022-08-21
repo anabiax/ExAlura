@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Funções</h1>
+    <script>
+        /*
+        var ano = 2022
+        var puloLinha = "<br><br>";
+
+        document.write("Ana tem " + (ano - 2001) + " anos");
+        document.write("<br><br>");                         // uma opção
+        document.write("Rosangela tem " + (ano - 1971) + " anos" + "<br><br>"); // outra opção
+        document.write("Levi tem " + (ano - 1970) + " anos")
+        document.write(puloLinha);                            // terceira opção
+
+        var ano = 2022
+        document.write("Maiara tem " + (ano - 2006) + " anos");
+        */
+       /*
+
+       <h3>Funções sem parâmetros</h3>
+
+        function pulaLinha() {            // conjunto de instruções a serem executadas
+            document.write("<br><br>");
+
+        }
+
+        var ano = 2022;
+
+        document.write("Ana tem " + (ano - 2001) + " anos");
+        pulaLinha();
+
+        document.write("Rosangela tem " + (ano - 1971) + " anos");
+        pulaLinha();
+
+        document.write("Levi tem " + (ano - 1970) + " anos");
+
+        */
+
+        function pulaLinha() {
+            document.write("<br>");
+            document.write("<br>");
+
+        }
+
+        function mostra(frase) {
+            
+            document.write(frase);
+
+            pulaLinha();
+        }
+
+        var ano = 2022;
+                
+        mostra("Ana tem " + (ano - 2001) + " anos");
+
+        mostra("Rosangela tem " + (ano - 1971) + " anos");
+
+        mostra("Levi tem " + (ano - 1970) + " anos");
+
+        mostra("Olá, pessoal");
+
+
+        // diferença entre idades
+        var idadeAna = 21;
+        var idadeMaiara = 16;
+
+        function idades(frase){
+
+            document.write(frase);
+
+        }
+        idades("Nossa diferença de idade são " + (idadeAna - idadeMaiara) + " anos")
+        pulaLinha();
+
+        // desafio dos portugueses:
+        var difepoca = 2022 - 1500;
+        var idadeMediaTerFilhos = 28
+        var geracoes = difepoca/idadeMediaTerFilhos
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+            document.write("<br>")
+        }
+
+        
+        mostra("Se passaram " + geracoes + " + gerações desde o marco da invasão portuguesa.")
+
+        
+
+    </script>
+</body>
+
+</html>

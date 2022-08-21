@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média idades</title>
+</head>
+<body>
+    <script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+
+    }
+        // 4
+        var totalFamiliares = parseInt(prompt("Quantidade de familiares?"));
+
+        var numero = 1; // inicializada em 1 pq a contagem começa do ponto zero. Se fosse pra começar do 0 teria que fornecer o numero 3 familiares
+        
+        var totalIdades = 0
+        while(numero <= totalFamiliares){
+            
+            var idade = parseInt(prompt("Informe idade do familiar"));
+            totalIdades = totalIdades + idade;
+            numero++; // incremento
+        }
+
+        var mediaDasIdades = totalIdades/totalFamiliares;
+        mostra("A média das idades dos familiares é " + mediaDasIdades);
+        mostra("fim");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso da Alura</title>
+</head>
+<body>
+    
+    <script>
+
+        function pulaLinha() {
+
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+
+            document.write(frase);
+            pulaLinha();
+        }
+
+    
+        var vitorias = parseInt(prompt("Entre com o nº de vitórias.")); // a função prompt sempre retorna um texto, não um número.
+                        // primeiramente é lido o que está entre parênteses
+                    // o retorno do prompt é lido como um número e não mais uma string
+        var empates = parseInt(prompt("Entre com o nº de empates."));
+
+        // calcular os pontos do time
+
+        var pontos = (vitorias * 3) + empates;
+
+        mostra("Pontos do seu time: " + pontos);
+
+        /* Supondo que no ano passado o total de pontos tenha sido 28, queremos que ele seja capaz de informar se o time está pior ou melhor em relação ao ano anterior.
+        Faremos uma comparação do total de pontos calculado com o total de pontos do ano anterior (no caso, 28), e teremos uma mensagem personalizada para cada tipo de situação. */
+
+        if(pontos > 28){ // se for falso não entra dentro do if, apenas verdadeiro "true"
+            mostra("Seu time está melhor do que no ano passado.");// valores: 10; 2
+        }
+
+        if(pontos < 28){
+            mostra("Seu time está pior do que no ano passado."); // valores: 3; 1
+        }
+
+        if(pontos == 28){
+            mostra("Seu time está igual ao ano passado."); // valores: 1; 25
+        }
+
+    </script>
+
+</body>
+</html>

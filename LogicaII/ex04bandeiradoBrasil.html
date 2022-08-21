@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        // o losango amarelo pode ser representado através de dois triângulos
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle='green';
+        pincel.fillRect(0, 0, 600, 400);
+
+        pincel.fillStyle='yellow';
+        pincel.beginPath();
+        pincel.moveTo(300, 50);
+        pincel.lineTo(50, 200);
+        pincel.lineTo(550, 200);
+        pincel.fill();
+
+        pincel.beginPath();
+        pincel.moveTo(300, 350);
+        pincel.lineTo(50, 200);
+        pincel.lineTo(550, 200);
+        pincel.fill();
+
+        pincel.fillStyle="darkblue";
+        pincel.beginPath();
+
+        pincel.arc(300, 200, 100, 0, 2*3.14); // círculo
+        /* Os primeiros dois parâmetros do método arc são as coordenadas X e Y do centro do circulo (no nosso caso, 300 e 200). O terceiro parâmetro é o valor do raio (no nosso caso, 100). 
+        / O quarto e quinto parâmetros definem o ângulo inicial e final do circulo. Como queremos desenhar um circulo completo, os parâmetros são, respectivamente, 0 e 2 * PI (cujo valor é 3.14). */
+        pincel.fill();
+
+    </script>
+</body>
+</html>

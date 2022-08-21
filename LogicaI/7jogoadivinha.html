@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de adivinha</title>
+</head>
+<body>
+    <script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    
+    var numeroPensado = Math.round(Math.random() * 10);  // gerar número aleatório entre 1-10 já arredondado
+    
+    var tentativas = 1;
+
+    while(tentativas <= 3) {   // 3 tentativas
+
+        var chute = parseInt(prompt("Digite seu chute!")); // leitura: parseInt do retorno do prompt para ser lido como número, uma vez que o js lê string
+
+        if(chute == numeroPensado){
+            mostra("Você acertou!")
+            tentativas = 4;    // quebra
+                            // ou break
+
+        } else {
+            mostra("Você errou.");
+        }
+
+        tentativas+1; // incrementar pra gastar o número de tentativas
+    }
+
+    mostra("fim")
+
+    </script>
+
+</body>
+</html>

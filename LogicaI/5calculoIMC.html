@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso da Alura - Condições</title>
+</head>
+<body>
+
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+            document.write("<br>");
+        }
+        
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calculaImc(peso, altura){
+            // var imc = peso / (altura * altura);
+            //mostra("O IMC calculado é " +  + Math.round(imc)) // a mensagem será fixa na função
+            // return imc;
+
+            // ou 
+
+            return peso / (altura * altura);
+        }
+
+     /* var pesoAna = 60;
+        var alturaAna = 1.57;
+
+        var pesoRosangela = 70;
+        var alturaRosangela = 1.61; 
+
+        var imcAna = calculaImc(pesoAna, alturaAna);
+        var imcRosangela = calculaImc(pesoRosangela, alturaRosangela); */
+
+             //  var totalImc = calculaImc(1.57, 60) + calculaImc(1.61, 70);
+
+     /* mostra("O IMC da Ana é: " + imcAna);
+        mostra("O IMC da Ro é: " + imcRosangela); */
+
+
+            // document.write("A soma dos IMCs é: " + totalImc);
+
+        // interagir com o usuário agora:
+
+        function calculaImc(altura, peso){
+        return peso / (altura * altura);
+      }
+
+      var nome = prompt("Informe o seu nome");
+      var alturaInformada = prompt("Informe sua altura"); // entrada do usuário
+      var pesoInformado = prompt("Informe seu peso");
+
+      var imc = calculaImc(alturaInformada, pesoInformado);
+
+      mostra(nome + ", o seu IMC é " + imc);
+
+      if(imc < 18.5){
+        mostra("Você está abaixo do recomendado pela OMS.")
+      }
+
+      if(imc > 35){
+        mostra("Você está acima do recomendado pela OMS.")
+      }
+      if(imc >= 18.5 && imc <= 35){ // dois 'if' é permitido
+            mostra("Seu IMC está excelente.")
+      }
+
+
+    </script>
+
+
+</body>
+</html>

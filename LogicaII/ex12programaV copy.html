@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="1000" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 1000, 400);
+
+    function desenhaCirculo(x, y, raio) {
+
+        pincel.fillStyle = 'orange';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI); //3.14
+        pincel.fill();
+    }
+
+    function limpaTela() {
+        pincel.clearRect(0, 0, 1000, 400);
+    }
+
+    // chamar um código num intervalo de tempo
+
+    var x = 20; // DECLARAR FORA DA FUNÇÃO  
+
+    function atualizaTela() {
+
+        limpaTela();
+        desenhaCirculo(x, 20, 10); // X, Y e RAIO
+        x++; // incrementa. valor de X no final = 21
+    }
+
+    setInterval(atualizaTela, 10); // aceita receber como parâmetro o nome da função que quero chamar, MAS SEM OS PARÊNTESES
+                    // eu quero chamar essa mensagem de 1 em 1 seg, mas é humanamente impossível e o JS chamará essa função de tempos em tempos pra mim
+                    // quantidade em milisegundos em que é chamada
+
+</script>
+</body>
+</html>

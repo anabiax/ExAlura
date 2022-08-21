@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        
+        var tela = document.querySelector('canvas')
+        var pincel = tela.getContext('2d')
+        
+        // essas bibliotecas são chamadas de API do JS, permitindo criar gráficos dentro das TAGs
+        // Chamamos estas instruções que as bibliotecas (APIs) deixam disponíveis para usarmos em nossos programas de métodos.
+
+
+
+        pincel.fillStyle = 'white'
+        pincel.fillRect(0, 0, 600, 400); // preencha o retângulo
+          // coordenada X e Y
+
+        pincel.fillStyle = 'darkblue'
+        pincel.fillRect(0, 0, 200, 400)
+
+        pincel.fillStyle = 'red' 
+        pincel.fillRect(400, 0, 200, 400) //  dois ultimos altura e largura
+                    // imagina a telinha dividida, por isso 400
+
+        pincel.fillStyle = 'black' // triângulo amarelo
+        pincel.beginPath(); // função pertence ao pincel p/ iniciar o meu caminho
+        pincel.moveTo(300, 200);
+        pincel.lineTo(200, 400)
+        pincel.lineTo(400, 400)
+        pincel.fill()
+
+        pincel.fillStyle = 'green'  
+        pincel.beginPath()  // começar novo caminho
+        pincel.arc(300, 200, 50, 0, 2 * 3.14) // onde está posicionada a minha bolinha, na ponta do triângulo
+                        //raio do meu círculo e radiano
+        pincel.fill();
+    </script>
+</body>
+</html>
